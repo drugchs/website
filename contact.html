@@ -227,7 +227,10 @@
                     },
                     body: new URLSearchParams(formData).toString(),
                 })
-                .then(() => console.log("Form successfully submitted"))
+                .then(() => {
+                    console.log("Form successfully submitted");
+                    myForm.reset();
+                })
                 .catch((error) => alert(error));
         };
 
